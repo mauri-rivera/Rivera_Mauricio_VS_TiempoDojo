@@ -112,13 +112,13 @@ main {
     padding-top: 1vh;
 }
 
-.maximo {
+.temperatura1 {
     font-size: xx-large;
     font-weight: bolder;
     color: red;
 }
 
-.minimo {
+.temperatura2 {
     font-size: xx-large;
     font-weight: bolder;
     color: blue;
