@@ -87,11 +87,81 @@ main {
     justify-content: space-between;
     background-color: rgb(226, 226, 226);
     width: 14vw;
-    height: 40vh;
-    padding: 2.75vh 0 4vh 0;
+    height: 45vh;
+    padding: 2.75vh 0 5vh 0;
+}
+
+.tituloDia {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 .cartaDiaClima img {
     width: 10vw;
     border-radius: 50%;
+}
+
+.datoClima {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.temperatura {
+    display: flex;
+    gap: 3vw;
+    padding-top: 1vh;
+}
+
+.maximo {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: red;
+}
+
+.minimo {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: blue;
+}
+
+.cuadroCookie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(226, 226, 226);
+    padding: 2vh 2vw;
+    border: 3px solid black;
+    gap: 2vw;
+    line-height: 3vh;
+    position: fixed;
+    width: 60vw;
+    box-sizing: border-box;
+}
+
+.botonCookie {
+    padding: 1vh 1vw;
+    background-color: deepskyblue;
+    font-size: 1.125rem;
+    font-weight: bolder;
+    box-shadow: 4px 4px black;
+    cursor: pointer;
+}
+
+.botonCookie:hover {
+    background-color: blue;
+    color: white;
+}
+
+.botonCookie:active {
+    background-color: deepskyblue;
+    color: black;
+}
+
+.cuadroCookie h3 {
+    padding-bottom: .75vh;
+    font-size: 1.35rem;
+}
+
+.cuadroCookie p {
+    font-weight: bold;
 }
