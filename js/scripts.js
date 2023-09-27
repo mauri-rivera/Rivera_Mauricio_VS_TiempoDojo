@@ -8,14 +8,9 @@ function aceptarCookie() {
     botonCookie.remove();
 }
 
-function medirTemperatura(elemento) {
-    let opcion = elemento.options[elemento.selectedIndex].text;
-
-    cambiarMedicion(opcion);
-}
-
-function cambiarMedicion(simbolo) {
+function cambiarMedicion(elemento) {
     let temperatura = "", formulaCelcius = "", formulaFahrenheit = "";
+    let opcion = elemento.options[elemento.selectedIndex].text;
 
     for (let i = 1; i <= 4; i++) {
         for (let j = 1; j <= 2; j++) {
@@ -27,17 +22,15 @@ function cambiarMedicion(simbolo) {
             else if (temperatura.length === 4) {
                 temperatura = temperatura.substring(0, 3);
             }
-
-            formulaCelcius = Math.round((temperatura * 32) * (5 / 9));
-            formulaFahrenheit = Math.round((temperatura * (9 / 5)) + 32);
         
-            if (simbolo === "°F") {
-                document.querySelector(`#dia${i} .temperatura${j}`).innerHTML = `${formulaCelcius}°`;
+            if (opcion === "°F") {
+                formulaFahrenheit = Math.round((temperatura * 1.8) + 32);
+                document.querySelector(`#dia${i} .temperatura${j}`).innerHTML = `${formulaFahrenheit}°`;
             }
             else {
-                document.querySelector(`#dia${i} .temperatura${j}`).innerHTML = `${formulaFahrenheit}°`;
+                formulaCelcius = Math.round((temperatura - 32) / 1.8);
+                document.querySelector(`#dia${i} .temperatura${j}`).innerHTML = `${formulaCelcius}°`;
             }
         }
     }
-
 }
